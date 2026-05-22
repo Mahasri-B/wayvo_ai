@@ -9,6 +9,7 @@ import RouteCard from '../components/RouteCard';
 import MapView from '../components/MapView';
 import LoadingSkeleton from '../components/LoadingSkeleton';
 import HillStations from '../components/HillStations';
+import SettingsPanel from '../components/SettingsPanel';
 import { searchRoutes, getRouteGeometry } from '../utils/api';
 import toast from 'react-hot-toast';
 
@@ -146,15 +147,14 @@ export default function Home({ activeTab, onTabChange }) {
           {['saved','settings'].includes(activeTab) && (
             <motion.div key={activeTab} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }}
               className="w-full h-full flex items-center justify-center">
-              <div className="white-card p-12 text-center max-w-md">
-                <h3 className="font-bold text-gray-800 text-lg mb-2">
-                  {activeTab==='saved'?'Saved Trips':'Settings'}
-                </h3>
-                <p className="text-gray-400 text-sm">
-                  {activeTab==='saved'&&'Your saved trips and favorite routes will appear here.'}
-                  {activeTab==='settings'&&'App settings and preferences coming soon.'}
-                </p>
-              </div>
+              {activeTab === 'settings' ? (
+                <SettingsPanel darkMode={darkMode} />
+              ) : (
+                <div className="white-card p-12 text-center max-w-md">
+                  <h3 className="font-bold text-gray-800 text-lg mb-2">Saved Trips</h3>
+                  <p className="text-gray-400 text-sm">Your saved trips and favorite routes will appear here.</p>
+                </div>
+              )}
             </motion.div>
           )}
 

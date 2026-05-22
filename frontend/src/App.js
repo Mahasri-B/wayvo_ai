@@ -24,6 +24,9 @@ function App() {
         <div className="flex-1 overflow-hidden">
           <Home activeTab={activeTab} onTabChange={setActiveTab} darkMode={darkMode} />
         </div>
+        <div className={`flex-shrink-0 text-center py-1.5 text-xs ${darkMode ? 'text-gray-600' : 'text-gray-400'}`}>
+          Built by <span className={darkMode ? 'text-gray-400 font-medium' : 'text-gray-500 font-medium'}>Mahasri Bairavanathan</span> · 2026
+        </div>
       </div>
       <Toaster
         position="top-right"
