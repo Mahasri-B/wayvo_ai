@@ -13,7 +13,7 @@ import SettingsPanel from '../components/SettingsPanel';
 import { searchRoutes, getRouteGeometry } from '../utils/api';
 import toast from 'react-hot-toast';
 
-export default function Home({ activeTab, onTabChange }) {
+export default function Home({ activeTab, onTabChange, darkMode }) {
   const [loading, setLoading]        = useState(false);
   const [results, setResults]        = useState(null);
   const [routeGeo, setRouteGeo]      = useState(null);
