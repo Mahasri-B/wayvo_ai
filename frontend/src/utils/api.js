@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const BASE_URL = process.env.REACT_APP_BACKEND_URL
   ? `${process.env.REACT_APP_BACKEND_URL}/api/v1`
-  : '/api/v1';
+  : 'https://wayvo-ai.onrender.com/api/v1';
 
 const api = axios.create({
   baseURL: BASE_URL,
