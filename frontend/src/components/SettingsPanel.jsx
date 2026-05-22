@@ -54,7 +54,7 @@ export default function SettingsPanel({ darkMode }) {
             M
           </div>
           <h2 className={`text-lg font-bold ${text}`}>Mahasri Bairavanathan</h2>
-          <p className={`text-sm mt-0.5 ${sub}`}>Builder of PathFinder TN · 2026</p>
+          <p className={`text-sm mt-0.5 ${sub}`}>Builder of Wayvo AI · 2026</p>
         </div>
 
         {/* Links */}
