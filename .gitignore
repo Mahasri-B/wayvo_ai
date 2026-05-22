@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.env
+*.db
+*.sqlite3
+
+# Node
+node_modules/
+build/
+.env.local
+.env.production
+
+# Data / ML cache
+chroma_data/
+!backend/data/TNDATA_SETC.json
+
+# Kaggle
+~/.cache/kagglehub/
+
+# OS
+.DS_Store
+Thumbs.db

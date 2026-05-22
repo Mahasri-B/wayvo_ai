@@ -1,0 +1,4 @@
+transport_type,area,origin,destination,approximate_fare_inr,fare_type,availability,frequency,capacity,notes
+share_auto,Ooty,Ooty Bus Stand,Botanical Garden,15,fixed,6am-9pm,every 15 mins,8,Shared autos run frequently
+auto,Kodaikanal,Kodaikanal Bus Stand,Coaker's Walk,60,negotiable,6am-8pm,on demand,3,Negotiate fare before boarding
+van,Yercaud,Salem Bus Stand,Yercaud,40,fixed,7am-7pm,every 30 mins,12,Mini vans serve hill route

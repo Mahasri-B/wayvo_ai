@@ -1,0 +1,2 @@
+train_number,train_name,origin_station,destination_station,origin_code,destination_code,via_stations,departure_time,arrival_time,duration_minutes,fare_sleeper,fare_general,fare_ac,train_type,operates_on,notes
+12635,Vaigai Express,Chennai Egmore,Madurai,MS,MDU,"[""Villupuram"",""Trichy""]",12:10,17:30,320,185,75,650,superfast,"[""daily""]",Popular express

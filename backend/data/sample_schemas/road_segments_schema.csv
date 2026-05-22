@@ -1,0 +1,3 @@
+from_location,to_location,road_name,road_type,distance_km,condition,is_ghat_road,ghat_sections,is_seasonal,closed_months,scenic_rating,difficulty_rating,safety_notes,local_tips
+Mettupalayam,Ooty,Ooty Ghat Road,SH,64,good,True,36,False,[],5,4,Drive slowly on hairpin bends. Overtaking dangerous.,Start early morning to avoid traffic and fog
+Dindigul,Kodaikanal,Kodaikanal Ghat Road,SH,80,fair,True,40,False,[],5,4,Road narrows at several points. No night driving.,Carry water and snacks. Limited shops on ghat

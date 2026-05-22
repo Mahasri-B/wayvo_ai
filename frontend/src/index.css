@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "leaflet/dist/leaflet.css";
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, sans-serif;
+  background: #F8F9FA;
+  color: #111827;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: #F3F4F6; }
+::-webkit-scrollbar-thumb { background: #D1D5DB; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #9CA3AF; }
+
+/* Sidebar scrollbar invisible */
+.sidebar-scroll::-webkit-scrollbar { width: 0; }
+
+/* White card */
+.white-card {
+  background: #ffffff;
+  border-radius: 14px;
+  border: 1px solid #E5E7EB;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+
+/* Purple button */
+.btn-purple {
+  background: linear-gradient(135deg, #7C3AED, #9333EA);
+  color: #fff;
+  font-weight: 600;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.15s, transform 0.1s;
+}
+.btn-purple:hover { opacity: 0.92; }
+.btn-purple:active { transform: scale(0.97); }
+
+/* Chip */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 500;
+  border: 1.5px solid #E5E7EB;
+  background: #fff;
+  color: #6B7280;
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+.chip:hover { border-color: #7C3AED; color: #7C3AED; }
+.chip.active {
+  background: linear-gradient(135deg, #7C3AED, #9333EA);
+  border-color: transparent;
+  color: #fff;
+}
+
+/* Nav item */
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 12px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.65);
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  transition: all 0.15s;
+}
+.nav-item:hover { background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.9); }
+.nav-item.active {
+  background: linear-gradient(135deg, #7C3AED, #9333EA);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(124,58,237,0.4);
+}
+
+/* Live dot */
+.live-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #22C55E;
+  animation: pulse-green 2s infinite;
+}
+@keyframes pulse-green {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(34,197,94,0.4); }
+  50%       { box-shadow: 0 0 0 5px rgba(34,197,94,0); }
+}
+
+/* Suggestion chips */
+.suggestion-chip-blue {
+  width: 100%;
+  text-align: left;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #2563EB;
+  background: #EFF6FF;
+  border: 1.5px solid #BFDBFE;
+  cursor: pointer;
+  transition: all 0.15s;
+  line-height: 1.4;
+}
+.suggestion-chip-blue:hover { background: #DBEAFE; border-color: #93C5FD; }
+
+.suggestion-chip-amber {
+  width: 100%;
+  text-align: left;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #D97706;
+  background: #FFFBEB;
+  border: 1.5px solid #FDE68A;
+  cursor: pointer;
+  transition: all 0.15s;
+  line-height: 1.4;
+}
+.suggestion-chip-amber:hover { background: #FEF3C7; border-color: #FCD34D; }
+
+/* Chat bubbles */
+.bubble-user {
+  background: linear-gradient(135deg, #7C3AED, #9333EA);
+  color: #fff;
+  border-radius: 18px 18px 4px 18px;
+}
+.bubble-ai {
+  background: #F3F4F6;
+  color: #374151;
+  border: 1px solid #E5E7EB;
+  border-radius: 18px 18px 18px 4px;
+}
+
+/* Shimmer */
+@keyframes shimmer {
+  0%   { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+.shimmer {
+  background: linear-gradient(90deg, #F3F4F6 25%, #E5E7EB 50%, #F3F4F6 75%);
+  background-size: 400px 100%;
+  animation: shimmer 1.4s ease infinite;
+}
+
+/* Leaflet light theme */
+.leaflet-container { background: #e8f4f8 !important; border-radius: 14px; }
+.leaflet-tile { filter: brightness(1.0) saturate(0.9); }

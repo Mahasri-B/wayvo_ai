@@ -1,0 +1,2 @@
+route_number,operator,origin,destination,via_stops,departure_times,frequency_minutes,duration_minutes,fare_inr,bus_type,operates_on,notes
+1A,TNSTC,Trichy,Madurai,"[""Dindigul"",""Natham""]","[""06:00"",""08:00"",""10:00""]",120,180,85,ordinary,"[""daily""]",Express service

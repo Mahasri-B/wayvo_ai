@@ -1,0 +1,3 @@
+name,local_name,location_type,district,taluk,latitude,longitude,population,elevation_m,nearest_town,nearest_railway,nearest_bus_stand,connectivity_notes,best_season,avoid_season
+Ooty,உதகமண்டலம்,hill_station,Nilgiris,Udhagamandalam,11.4102,76.6950,88430,2240,Coimbatore,Mettupalayam,Ooty Bus Stand,Well connected by bus and toy train,October to June,July to September (heavy rain)
+Kodaikanal,கொடைக்கானல்,hill_station,Dindigul,Kodaikanal,10.2381,77.4892,36501,2133,Dindigul,Kodai Road,Kodaikanal Bus Stand,No direct train. Bus from Dindigul/Madurai,September to May,June to August
