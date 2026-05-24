@@ -69,7 +69,7 @@ export default function Home({ activeTab, onTabChange, darkMode }) {
   } : null;
 
   const LeftCol = () => (
-    <div className="flex flex-col gap-3 flex-shrink-0 overflow-y-auto" style={{ width: 300 }}>
+    <div className="hidden md:flex flex-col gap-3 flex-shrink-0 overflow-y-auto" style={{ width: 300 }}>
       <QuickActions onAction={handleQuickAction} />
     </div>
   );
@@ -79,7 +79,7 @@ export default function Home({ activeTab, onTabChange, darkMode }) {
       <div className="flex-shrink-0"><SearchSection onSearch={handleSearch} loading={loading} /></div>
       <div className="flex-shrink-0"><StatsRow /></div>
 
-      <div className="flex-1 overflow-hidden flex gap-3 px-4 py-3 min-h-0">
+      <div className="flex-1 overflow-hidden flex gap-3 px-2 md:px-4 py-3 min-h-0 pb-16 md:pb-3">
         <AnimatePresence mode="wait">
 
           {/* CHAT */}

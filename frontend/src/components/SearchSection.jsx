@@ -29,9 +29,9 @@ export default function SearchSection({ onSearch, loading }) {
   };
 
   return (
-    <div className="white-card mx-4 mt-4 p-4">
+    <div className="white-card mx-2 md:mx-4 mt-3 md:mt-4 p-3 md:p-4">
       {/* Row 1 */}
-      <div className="flex items-end gap-2">
+      <div className="flex flex-col sm:flex-row items-stretch sm:items-end gap-2">
         {/* From */}
         <div className="flex-1 min-w-0">
           <label className="flex items-center gap-1.5 text-xs font-semibold text-gray-500 mb-1.5">
@@ -50,7 +50,7 @@ export default function SearchSection({ onSearch, loading }) {
 
         {/* Swap */}
         <motion.button whileTap={{ rotate: 180 }} onClick={swap}
-          className="flex-shrink-0 mb-0.5 p-2.5 rounded-lg text-gray-400 hover:text-purple-600 hover:bg-purple-50 transition-colors"
+          className="self-center sm:self-auto sm:mb-0.5 p-2.5 rounded-lg text-gray-400 hover:text-purple-600 hover:bg-purple-50 transition-colors"
           style={{ border: '1.5px solid #E5E7EB' }}>
           <RefreshCw size={15} />
         </motion.button>
@@ -74,7 +74,7 @@ export default function SearchSection({ onSearch, loading }) {
         {/* Search button */}
         <motion.button whileTap={{ scale: 0.97 }} onClick={go}
           disabled={loading || !from.trim() || !to.trim()}
-          className="btn-purple flex-shrink-0 flex items-center gap-2 px-5 py-2.5 text-sm mb-0.5 disabled:opacity-50">
+          className="btn-purple flex-shrink-0 flex items-center justify-center gap-2 px-5 py-2.5 text-sm sm:mb-0.5 disabled:opacity-50 w-full sm:w-auto">
           {loading
             ? <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
             : <Search size={14} />
@@ -86,7 +86,7 @@ export default function SearchSection({ onSearch, loading }) {
       {/* Row 2 */}
       <div className="flex flex-wrap items-center gap-x-4 gap-y-2 mt-3 pt-3" style={{ borderTop: '1px solid #F3F4F6' }}>
         <div className="flex items-center gap-2 flex-wrap">
-          <span className="text-xs font-semibold text-gray-500">Travel Mode</span>
+          <span className="text-xs font-semibold text-gray-500">Mode</span>
           {MODES.map(({ id, label, Icon }) => (
             <button key={id} onClick={() => setMode(id)}
               className={`chip flex items-center gap-1.5 ${mode === id ? 'active' : ''}`}>
@@ -96,7 +96,7 @@ export default function SearchSection({ onSearch, loading }) {
         </div>
         <div className="hidden sm:block w-px h-5 bg-gray-200" />
         <div className="flex items-center gap-2 flex-wrap">
-          <span className="text-xs font-semibold text-gray-500">Preference</span>
+          <span className="text-xs font-semibold text-gray-500">Pref</span>
           {PREFS.map(({ id, label, icon, Icon }) => (
             <button key={id} onClick={() => setPref(id)}
               className={`chip flex items-center gap-1.5 ${pref === id ? 'active' : ''}`}>
