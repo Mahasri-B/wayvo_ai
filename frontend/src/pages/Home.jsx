@@ -76,9 +76,13 @@ export default function Home({ activeTab, onTabChange, darkMode }) {
 
   return (
     <div className="flex flex-col h-full overflow-hidden" style={{ background: '#F8F9FA' }}>
-      <div className="flex-shrink-0"><SearchSection onSearch={handleSearch} loading={loading} /></div>
-      <div className="flex-shrink-0"><StatsRow /></div>
-
+      {/* Hide search+stats on mobile for tabs that don't need them */}
+      <div className={`flex-shrink-0 ${['chat','map','hills','saved','settings'].includes(activeTab) ? 'hidden md:block' : ''}`}>
+        <SearchSection onSearch={handleSearch} loading={loading} />
+      </div>
+      <div className={`flex-shrink-0 ${['chat','map','hills','saved','settings'].includes(activeTab) ? 'hidden md:block' : ''}`}>
+        <StatsRow />
+      </div>
       <div className="flex-1 overflow-hidden flex gap-3 px-2 md:px-4 py-3 min-h-0 pb-16 md:pb-3">
         <AnimatePresence mode="wait">
 
